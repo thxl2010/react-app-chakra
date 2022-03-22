@@ -32,6 +32,16 @@ function App() {
       <Center bg="tomato" h="100px" color="white" margin="1em">
         This is the Center
       </Center>
+      <Box m={2} bg="skyblue">
+        m={2} refers to the value of `theme.space[2]`
+      </Box>
+      <Box maxW="960px" mx="auto" bg="skyblue">
+        You can also use custom values
+      </Box>
+      <Box m={[2, 3]} px="12px" py="24px" bg="skyblue" shadow="2xl">
+        sets margin `8px` on all viewports and `12px` from the first breakpoint
+        and up
+      </Box>
     </Box>
   );
 }
