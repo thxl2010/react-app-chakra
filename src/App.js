@@ -1,8 +1,23 @@
-import { Box, Stack, HStack, Button, Center } from '@chakra-ui/react';
+import {
+  Box,
+  Stack,
+  HStack,
+  Button,
+  Center,
+  useColorMode,
+} from '@chakra-ui/react';
 
 function App() {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
-    <Box bg="#f3f3f3" w="100%" p={4} color="#333" borderRadius="lg">
+    <Box w="100%" p={4} borderRadius="lg">
+      <header>
+        切换颜色模式 colorMode ：{colorMode}
+        <Button onClick={toggleColorMode}>
+          Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
+        </Button>
+      </header>
       <HStack spacing="24px">
         <Box w="100px" h="40px" bg="yellow.200">
           HStack Box 1
@@ -29,16 +44,31 @@ function App() {
           按钮 lg
         </Button>
       </Stack>
-      <Center bg="tomato" h="100px" color="white" margin="1em">
+      <Center
+        bg={colorMode === 'light' ? 'skyblue' : 'tomato'}
+        h="100px"
+        color="white"
+        margin="1em"
+      >
         This is the Center
       </Center>
-      <Box m={2} bg="skyblue">
+      <Box m={2} bg={colorMode === 'light' ? 'skyblue' : 'tomato'}>
         m={2} refers to the value of `theme.space[2]`
       </Box>
-      <Box maxW="960px" mx="auto" bg="skyblue">
+      <Box
+        maxW="960px"
+        mx="auto"
+        bg={colorMode === 'light' ? 'skyblue' : 'tomato'}
+      >
         You can also use custom values
       </Box>
-      <Box m={[2, 3]} px="12px" py="24px" bg="skyblue" shadow="2xl">
+      <Box
+        m={[2, 3]}
+        px="12px"
+        py="24px"
+        bg={colorMode === 'light' ? 'skyblue' : 'tomato'}
+        shadow="2xl"
+      >
         sets margin `8px` on all viewports and `12px` from the first breakpoint
         and up
       </Box>
