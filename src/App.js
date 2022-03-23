@@ -5,10 +5,12 @@ import {
   Button,
   Center,
   useColorMode,
+  useColorModeValue,
 } from '@chakra-ui/react';
 
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
+  const bg = useColorModeValue('skyblue', 'tomato');
 
   return (
     <Box w="100%" p={4} borderRadius="lg">
@@ -52,23 +54,13 @@ function App() {
       >
         This is the Center
       </Center>
-      <Box m={2} bg={colorMode === 'light' ? 'skyblue' : 'tomato'}>
+      <Box m={2} bg={bg}>
         m={2} refers to the value of `theme.space[2]`
       </Box>
-      <Box
-        maxW="960px"
-        mx="auto"
-        bg={colorMode === 'light' ? 'skyblue' : 'tomato'}
-      >
+      <Box maxW="960px" mx="auto" bg={bg}>
         You can also use custom values
       </Box>
-      <Box
-        m={[2, 3]}
-        px="12px"
-        py="24px"
-        bg={colorMode === 'light' ? 'skyblue' : 'tomato'}
-        shadow="2xl"
-      >
+      <Box m={[2, 3]} px="12px" py="24px" bg={bg} shadow="2xl">
         sets margin `8px` on all viewports and `12px` from the first breakpoint
         and up
       </Box>
