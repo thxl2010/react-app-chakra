@@ -6,6 +6,8 @@ import {
   Center,
   useColorMode,
   useColorModeValue,
+  LightMode,
+  DarkMode,
 } from '@chakra-ui/react';
 
 function App() {
@@ -16,9 +18,11 @@ function App() {
     <Box w="100%" p={4} borderRadius="lg">
       <header>
         切换颜色模式 colorMode ：{colorMode}
-        <Button onClick={toggleColorMode}>
-          Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
-        </Button>
+        <LightMode>
+          <Button colorScheme="blue" onClick={toggleColorMode}>
+            LightMode Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
+          </Button>
+        </LightMode>
       </header>
       <HStack spacing="24px">
         <Box w="100px" h="40px" bg="yellow.200">
@@ -32,10 +36,14 @@ function App() {
         </Box>
       </HStack>
       <Stack spacing={4} direction="row" align="center">
-        <Button colorScheme="blue">按钮</Button>
-        <Button colorScheme="blue" size="xs">
-          按钮 xs
-        </Button>
+        <LightMode>
+          <Button colorScheme="blue">按钮 LightMode</Button>
+        </LightMode>
+        <DarkMode>
+          <Button colorScheme="blue" size="xs">
+            按钮 xs DarkMode
+          </Button>
+        </DarkMode>
         <Button colorScheme="blue" size="sm">
           按钮 sm
         </Button>
