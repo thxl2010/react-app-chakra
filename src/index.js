@@ -5,6 +5,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const config = {
+  // initialColorMode: 'light',
+  useSystemColorMode: true,
+};
+
 const colors = {
   brand: {
     900: '#1a365d',
@@ -13,7 +18,7 @@ const colors = {
   },
 };
 
-const theme = extendTheme({ colors });
+const theme = extendTheme({ config, colors });
 
 ReactDOM.render(
   <React.StrictMode>
