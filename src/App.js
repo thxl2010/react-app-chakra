@@ -65,6 +65,9 @@ function App() {
       <Box m={2} bg={bg}>
         m={2} refers to the value of `theme.space[2]`
       </Box>
+      <Box mb={5} bg={bg}>
+        `mb={5}` <p>5 => 1.25rem</p>
+      </Box>
       <Box maxW="960px" mx="auto" bg={bg}>
         You can also use custom values
       </Box>
