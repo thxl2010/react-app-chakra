@@ -19,6 +19,7 @@ const colors = {
 };
 
 const theme = extendTheme({ config, colors });
+console.log('theme :', theme);
 
 ReactDOM.render(
   <React.StrictMode>

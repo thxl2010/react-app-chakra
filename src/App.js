@@ -15,7 +15,7 @@ function App() {
   const bg = useColorModeValue('skyblue', 'tomato');
 
   return (
-    <Box w="100%" p={4} borderRadius="lg">
+    <Box w="100%" p={4} borderRadius="lg" bg="tomato">
       <header>
         切换颜色模式 colorMode ：{colorMode}
         <LightMode>
