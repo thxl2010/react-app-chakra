@@ -71,7 +71,14 @@ function App() {
       <Box maxW="960px" mx="auto" bg={bg}>
         You can also use custom values
       </Box>
-      <Box m={[2, 3]} px="12px" py="24px" bg={bg} shadow="2xl">
+      <Box
+        w={[300, 400, 500]}
+        m={[2, 3]}
+        px="12px"
+        py="24px"
+        bg={bg}
+        shadow="2xl"
+      >
         sets margin `8px` on all viewports and `12px` from the first breakpoint
         and up
       </Box>

@@ -18,7 +18,15 @@ const colors = {
   },
 };
 
-const theme = extendTheme({ config, colors });
+const breakpoints = {
+  sm: '30em',
+  md: '48em',
+  lg: '62em',
+  xl: '80em',
+  '2xl': '96em',
+};
+
+const theme = extendTheme({ config, colors, breakpoints });
 console.log('theme :', theme);
 
 ReactDOM.render(
