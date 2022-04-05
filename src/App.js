@@ -8,7 +8,9 @@ import {
   useColorModeValue,
   LightMode,
   DarkMode,
+  Flex,
 } from '@chakra-ui/react';
+import Person from './components/Person';
 
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -107,6 +109,13 @@ function App() {
           <span>variant="solid" </span>
           <Button variant="solid">Welcome</Button>
         </Box>
+      </Box>
+      <Box>
+        <h2>自定义组件（非内置组件）：</h2>
+        <Flex>
+          <Person />
+          <Person />
+        </Flex>
       </Box>
     </Box>
   );
