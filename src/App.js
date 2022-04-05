@@ -15,7 +15,7 @@ function App() {
   const bg = useColorModeValue('skyblue', 'tomato');
 
   return (
-    <Box w="100%" p={4} borderRadius="lg" bg="tomato">
+    <Box w="100%" p={4} borderRadius="lg">
       <header>
         切换颜色模式 colorMode ：{colorMode}
         <LightMode>
@@ -54,6 +54,21 @@ function App() {
           按钮 lg
         </Button>
       </Stack>
+      <Stack direction="row" spacing={4} align="center">
+        <h2>variant:</h2>
+        <Button colorScheme="teal" variant="solid">
+          Button solid
+        </Button>
+        <Button colorScheme="teal" variant="outline">
+          Button outline
+        </Button>
+        <Button colorScheme="teal" variant="ghost">
+          Button ghost
+        </Button>
+        <Button colorScheme="teal" variant="link">
+          Button link
+        </Button>
+      </Stack>
       <Center
         bg={colorMode === 'light' ? 'skyblue' : 'tomato'}
         h="100px"
@@ -81,6 +96,17 @@ function App() {
       >
         sets margin `8px` on all viewports and `12px` from the first breakpoint
         and up
+      </Box>
+      <Box>
+        <h2>自定义组件样式：</h2>
+        <Box>
+          <span>size="xl" variant="with-shadow"</span>
+          <Button size="xl" variant="with-shadow">
+            Welcome
+          </Button>
+          <span>variant="solid" </span>
+          <Button variant="solid">Welcome</Button>
+        </Box>
       </Box>
     </Box>
   );
