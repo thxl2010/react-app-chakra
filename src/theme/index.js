@@ -4,6 +4,9 @@ import styles from './styles';
 // Component style overrides
 import Button from './components/button';
 
+// Duyb component
+import DuybComponent from './Duyb';
+
 const config = {
   // initialColorMode: 'light',
   useSystemColorMode: true,
@@ -27,6 +30,8 @@ const breakpoints = {
 
 const components = {
   Button,
+  // Other components go here
+  ...DuybComponent,
 };
 
 const theme = extendTheme({

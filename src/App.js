@@ -9,6 +9,7 @@ import {
   LightMode,
   DarkMode,
   Flex,
+  Spacer,
 } from '@chakra-ui/react';
 import Person from './components/Person';
 
