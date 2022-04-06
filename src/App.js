@@ -9,9 +9,9 @@ import {
   LightMode,
   DarkMode,
   Flex,
-  Spacer,
 } from '@chakra-ui/react';
 import Person from './components/Person';
+import Form from './components/Form';
 
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -117,6 +117,12 @@ function App() {
           <Person />
           <Person />
         </Flex>
+      </Box>
+      <Box>
+        <h2>构建注册表单：</h2>
+        <Box w={500} bg="white" px={12} py={6} mx="auto" my={6}>
+          <Form />
+        </Box>
       </Box>
     </Box>
   );
