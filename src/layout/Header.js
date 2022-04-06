@@ -16,7 +16,7 @@ export default function Header() {
           float="left"
           align="center"
         >
-          <Link to="/home">首页</Link>
+          <Link to="/">首页</Link>
           <Link to="/login">登录表单</Link>
           <Link to="/card">卡片</Link>
         </Stack>
