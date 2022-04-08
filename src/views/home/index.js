@@ -3,7 +3,7 @@
  * @Author: Duyb
  * @Date: 2022-04-06 18:01:55
  * @Last Modified by: Duyb
- * @Last Modified time: 2022-04-06 18:30:53
+ * @Last Modified time: 2022-04-08 18:20:55
  */
 import {
   Box,
@@ -127,7 +127,7 @@ function Home() {
       </Box>
       <Box>
         <h2>构建注册表单：</h2>
-        <Box w={500} bg="white" px={12} py={6} mx="auto" my={6}>
+        <Box w={500} px={12} py={6} mx="auto" my={6}>
           <Form />
         </Box>
       </Box>

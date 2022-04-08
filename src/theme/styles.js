@@ -3,15 +3,14 @@
  * @Author: Duyb
  * @Date: 2022-04-03 21:04:09
  * @Last Modified by: Duyb
- * @Last Modified time: 2022-04-06 17:49:36
+ * @Last Modified time: 2022-04-08 18:15:16
  */
 
 const styles = {
-  global: {
+  global: (props) => ({
     // styles for the `body`
     body: {
-      bg: 'gray.100',
-      // color: 'black',
+      bg: props.colorMode === 'dark' ? 'gray.600' : 'gray.100',
     },
     // styles for the `a`
     a: {
@@ -20,7 +19,7 @@ const styles = {
         textDecoration: 'underline',
       },
     },
-  },
+  }),
 };
 
 export default styles;

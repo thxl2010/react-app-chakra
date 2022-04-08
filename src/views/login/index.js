@@ -3,7 +3,7 @@
  * @Author: Duyb
  * @Date: 2022-04-06 18:02:20
  * @Last Modified by: Duyb
- * @Last Modified time: 2022-04-08 15:48:25
+ * @Last Modified time: 2022-04-08 18:21:49
  */
 import {
   Box,
@@ -13,17 +13,22 @@ import {
   TabPanels,
   TabPanel,
   Image,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import SignUp from './SignUp';
 import SignIn from './SignIn';
 
-import logo from '../../assets/images/logo.jpg';
+import logoLight from '../../assets/images/chakra-ui-light.png';
+import logoDark from '../../assets/images/chakra-ui-dark.png';
 
 export default function Login() {
+  const bgColor = useColorModeValue('white', 'gray.700');
+  const logo = useColorModeValue(logoLight, logoDark);
+
   return (
     <>
       <Box
-        bg="#fff"
+        bgColor={bgColor}
         px={12}
         py={6}
         w="50%"
@@ -31,7 +36,7 @@ export default function Login() {
         boxShadow="lg"
         borderRadius="lg"
       >
-        <Image src={logo} w="50px" mx="auto" mb="12px" borderRadius="50%" />
+        <Image src={logo} h="50px" mx="auto" mb="12px" />
 
         <Tabs variant="enclosed" isFitted>
           <TabList>

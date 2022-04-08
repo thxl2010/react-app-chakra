@@ -2,14 +2,14 @@ import { extendTheme } from '@chakra-ui/react';
 // Global style overrides
 import styles from './styles';
 // Component style overrides
-import Button from './components/button';
+// import Button from './components/button';
 
 // Duyb component
 import DuybComponent from './Duyb';
 
 const config = {
-  // initialColorMode: 'light',
-  useSystemColorMode: true,
+  initialColorMode: 'light',
+  // useSystemColorMode: true,
 };
 
 const colors = {
@@ -29,7 +29,7 @@ const breakpoints = {
 };
 
 const components = {
-  Button,
+  // Button,
   // Other components go here
   ...DuybComponent,
 };
