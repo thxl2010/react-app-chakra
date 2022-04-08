@@ -8,16 +8,9 @@ export default function Header() {
     <Box h="60px" bg={colorMode === 'light' ? 'gray.200' : 'gray.700'}>
       <Box w="80%" m="auto" overflow="hidden">
         <Image float="left" mt="10px" w="40px" src={logo} />
-        <Stack
-          spacing="12px"
-          direction="horizontal"
-          ml={8}
-          h="60px"
-          float="left"
-          align="center"
-        >
+        <Stack direction="row" ml={8} h="60px" float="left" align="center">
           <Link to="/">首页</Link>
-          <Link to="/login">登录表单</Link>
+          <Link to="/login">登录</Link>
           <Link to="/card">卡片</Link>
         </Stack>
         <Button

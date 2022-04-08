@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Box } from '@chakra-ui/react';
 import Home from '../views/home';
 import Login from '../views/login';
-// import Card from "./Card";
+import Card from '../views/card';
 
 export default function Main() {
   return (
@@ -11,7 +11,7 @@ export default function Main() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        {/* <Route path="/card" element={<Card />} /> */}
+        <Route path="/card" element={<Card />} />
       </Routes>
     </Box>
   );
