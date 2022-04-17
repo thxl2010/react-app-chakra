@@ -12,6 +12,7 @@ export default function Header() {
           <Link to="/">首页</Link>
           <Link to="/login">登录</Link>
           <Link to="/card">卡片</Link>
+          <Link to="/jianshu">登录·简书</Link>
         </Stack>
         <Button
           colorScheme="teal"

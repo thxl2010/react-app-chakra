@@ -4,6 +4,7 @@ import { Box } from '@chakra-ui/react';
 import Home from '../views/home';
 import Login from '../views/login';
 import Card from '../views/card';
+import JianShu from '../views/jianshu';
 
 export default function Main() {
   return (
@@ -12,6 +13,7 @@ export default function Main() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/card" element={<Card />} />
+        <Route path="/jianshu" element={<JianShu />} />
       </Routes>
     </Box>
   );
