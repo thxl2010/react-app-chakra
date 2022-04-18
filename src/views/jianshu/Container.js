@@ -21,17 +21,20 @@ export default function Container() {
     <>
       <Box
         bgColor={bgColor}
-        px={12}
-        py={6}
-        w="50%"
-        minW="375px"
+        padding={50}
+        w={400}
         boxShadow="lg"
         borderRadius="lg"
       >
-        <Tabs variant="enclosed" isFitted>
-          <TabList>
-            <Tab>登录</Tab>
-            <Tab>注册</Tab>
+        <Tabs align="center" colorScheme="orange">
+          <TabList alignItems="center" border="none">
+            <Tab _focus={{ boxShadow: 'none' }} fontWeight="bold">
+              登录
+            </Tab>
+            <b>·</b>
+            <Tab _focus={{ boxShadow: 'none' }} fontWeight="bold">
+              注册
+            </Tab>
           </TabList>
           <TabPanels>
             <TabPanel>

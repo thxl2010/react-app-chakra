@@ -19,12 +19,13 @@ export default function SignIn() {
             <InputLeftAddon children={<FaUserAlt />} />
             <Input placeholder="手机号或邮箱" />
           </InputGroup>
-          {/* <FormHelperText>请输入手机号或邮箱</FormHelperText> */}
+          <FormHelperText>请输入手机号或邮箱</FormHelperText>{' '}
+          <InputGroup>
+            <InputLeftAddon children={<FaLock />} />
+            <Input type="password" placeholder="密码" />
+          </InputGroup>
+          <FormHelperText>请输入密码</FormHelperText>{' '}
         </FormControl>
-        <InputGroup>
-          <InputLeftAddon children={<FaLock />} />
-          <Input type="password" placeholder="密码" />
-        </InputGroup>
         <Stack direction="row" justify="space-between">
           <Checkbox>记住我</Checkbox>
           <a href="https://www.jianshu.com/sessions">登陆遇到问题？</a>
