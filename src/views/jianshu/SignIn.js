@@ -76,7 +76,7 @@ export default function SignIn() {
           </FormHelperText>
         </FormControl>
         <FormControl
-          isInvalid={!!formik.errors.email && formik.touched.email}
+          isInvalid={!!formik.errors.password && formik.touched.password}
           isRequired
         >
           <InputGroup>
