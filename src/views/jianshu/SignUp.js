@@ -65,13 +65,17 @@ export default function SignUp() {
   return (
     <form onSubmit={formik.handleSubmit}>
       <Stack spacing="8">
-        <FormControl isInvalid isRequired>
+        <FormControl
+          isInvalid={!!formik.errors.username && formik.touched.username}
+          isRequired
+        >
           <InputGroup>
             <InputLeftAddon children={<FaUserAlt />} />
             <Input
+              colorScheme="blue"
               placeholder="你的昵称"
               id="signup-username"
-              type="username"
+              type="text"
               name="username"
               {...formik.getFieldProps('username')}
             />
@@ -81,6 +85,11 @@ export default function SignUp() {
               ? formik.errors.username
               : null}
           </FormHelperText>
+        </FormControl>
+        <FormControl
+          isInvalid={!!formik.errors.email && formik.touched.email}
+          isRequired
+        >
           <InputGroup>
             <InputLeftAddon children={<FaEnvelope />} />
             <Input
@@ -95,7 +104,12 @@ export default function SignUp() {
             {formik.touched.email && formik.errors.email
               ? formik.errors.email
               : null}
-          </FormHelperText>{' '}
+          </FormHelperText>
+        </FormControl>
+        <FormControl
+          isInvalid={!!formik.errors.password && formik.touched.password}
+          isRequired
+        >
           <InputGroup>
             <InputLeftAddon children={<FaLock />} />
             <Input
@@ -105,14 +119,13 @@ export default function SignUp() {
               name="password"
               {...formik.getFieldProps('password')}
             />
-            <FormHelperText>
-              {formik.touched.password && formik.errors.password
-                ? formik.errors.password
-                : null}
-            </FormHelperText>
           </InputGroup>
+          <FormHelperText>
+            {formik.touched.password && formik.errors.password
+              ? formik.errors.password
+              : null}
+          </FormHelperText>
         </FormControl>
-
         <Button
           colorScheme="green"
           w="100%"

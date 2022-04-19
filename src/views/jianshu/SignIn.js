@@ -55,7 +55,10 @@ export default function SignIn() {
   return (
     <form onSubmit={formik.handleSubmit}>
       <Stack spacing="8">
-        <FormControl isInvalid isRequired>
+        <FormControl
+          isInvalid={!!formik.errors.email && formik.touched.email}
+          isRequired
+        >
           <InputGroup>
             <InputLeftAddon children={<FaUserAlt />} />
             <Input
@@ -71,6 +74,11 @@ export default function SignIn() {
               ? formik.errors.email
               : null}
           </FormHelperText>
+        </FormControl>
+        <FormControl
+          isInvalid={!!formik.errors.email && formik.touched.email}
+          isRequired
+        >
           <InputGroup>
             <InputLeftAddon children={<FaLock />} />
             <Input
